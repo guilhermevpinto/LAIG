@@ -1,0 +1,3 @@
+http://www.redblobgames.com/grids/hexagons/
+https://moodle.up.pt/pluginfile.php/50975/mod_resource/content/13/EnunciadoT3.html
+http://oos.moxiecode.com/blog/index.php/experiments/javascript-webgl/

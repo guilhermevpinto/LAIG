@@ -1,0 +1,7 @@
+Para correr o projeto necessita de ter instalado o browser google chrome(ou outro que suporte as mesmas funcionalidades de javascript) e o programa SWI-Prolog.
+
+Passos para correr o programa:
+1->Abrir o ficheiro "server.pl" (tendo previamente instalado o SWI-Prolog, correr com o mesmo)
+2->Abrir o browser Google Chrome
+3->inserir o seguinte link na barra de endereços(tendo o "server.pl" a correr):
+	http://localhost:8081/project/reader/index.html

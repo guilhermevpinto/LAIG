@@ -1,0 +1,471 @@
+<SCENE>
+	
+	<INITIALS>
+	    <frustum near="0.1" far="500.0"/>                      	<!-- frustum planes-->
+	    <translation x="0" y="0" z="0" />                 	<!-- initial translate -->
+	    <rotation axis="x" angle="0.0" />                  		<!-- initial rotation 3 -->
+	    <rotation axis="y" angle="0.0" />                 		<!-- initial rotation 2 -->
+	    <rotation axis="z" angle="0.0" />                  		<!-- initial rotation 1 -->
+	    <scale sx="1" sy="1" sz="1" />                  	<!-- initial scaling -->
+	    <reference length="10" />                          		<!-- axis length; "0" means no axis-->
+	</INITIALS>
+	
+	
+	<ILLUMINATION>
+	   	<ambient r="0.3" g="0.3" b="0.3" a="1" />
+	    <background r="0.3" g="0.3" b="0.3" a="1" />
+	</ILLUMINATION>
+	
+	
+	<LIGHTS>
+	    <LIGHT id="menu1">
+	        <enable value="1" />
+	        <position x="0" y="5" z="5" w="1" />
+	        <ambient r="0.5" g="0.5" b="0.5" a="1" />
+	        <diffuse r="1" g="1" b="1" a="1" />
+	        <specular r="0" g="0" b="0" a="1" />
+	    </LIGHT>
+	    <LIGHT id="menu2">
+	        <enable value="1" />
+	        <position x="10" y="15" z="0" w="1" />
+	        <ambient r="0.1" g="0.1" b="0.1" a="1" />
+	        <diffuse r="1" g="1" b="1" a="1" />
+	        <specular r="0" g="0" b="0" a="1" />
+	    </LIGHT>
+
+	    <LIGHT id="board1">
+	        <enable value="1" />
+	        <position x="13" y="5" z="13" w="1" />
+	        <ambient r="0" g="0" b="0" a="1" />
+	        <diffuse r="0.1" g="0.1" b="0.1" a="1" />
+	        <specular r="0.8" g="0.8" b="0.8" a="1" />
+	    </LIGHT>
+	    <LIGHT id="board2">
+	        <enable value="1" />
+	        <position x="-13" y="5" z="13" w="1" />
+	        <ambient r="0" g="0" b="0" a="1" />
+	        <diffuse r="0.1" g="0.1" b="0.1" a="1" />
+	        <specular r="0.8" g="0.8" b="0.8" a="1" />
+	    </LIGHT>
+	    <LIGHT id="board3">
+	        <enable value="1" />
+	        <position x="13" y="5" z="-13" w="1" />
+	        <ambient r="0" g="0" b="0" a="1" />
+	        <diffuse r="0.1" g="0.1" b="0.1" a="1" />
+	        <specular r="0.8" g="0.8" b="0.8" a="1" />
+	    </LIGHT>
+	    <LIGHT id="board4">
+	        <enable value="1" />
+	        <position x="-13" y="5" z="-13" w="1" />
+	        <ambient r="0" g="0" b="0" a="1" />
+	        <diffuse r="0.1" g="0.1" b="0.1" a="1" />
+	        <specular r="0.8" g="0.8" b="0.8" a="1" />
+	    </LIGHT>
+
+
+	</LIGHTS>
+	
+	<TEXTURES>
+		<TEXTURE id="terrain">
+			<file path="./textures/2.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="heightmap">
+			<file path="./textures/1.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="red">
+			<file path="./textures/red.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="green">
+			<file path="./textures/green.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="blue">
+			<file path="./textures/blue.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="yellow">
+			<file path="./textures/yellow.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="topTile">
+			<file path="./textures/topTheme.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="topTileHighlight">
+			<file path="./textures/topThemeHighlight.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="botTile">
+			<file path="./textures/botTheme.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="play">
+			<file path="./textures/play.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="howto">
+			<file path="./textures/howto.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="rules">
+			<file path="./textures/rules.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="char">
+			<file path="./textures/char.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="numbers">
+			<file path="./textures/numbers.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="space">
+			<file path="./textures/space.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="engine">
+			<file path="./textures/engine.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="spaceship">
+			<file path="./textures/spaceship.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="flame">
+			<file path="./textures/flame.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="wood">
+			<file path="./textures/wood.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="spaceship2">
+			<file path="./textures/spaceship2.jpg" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="landscape">
+			<file path="./textures/landscape.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Player1Won">
+			<file path="./textures/player1Won.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Player2Won">
+			<file path="./textures/player2Won.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Player3Won">
+			<file path="./textures/player3Won.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Player4Won">
+			<file path="./textures/player4Won.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="draw">
+			<file path="./textures/draw.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Bot1Won">
+			<file path="./textures/bot1Won.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Bot2Won">
+			<file path="./textures/bot2Won.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Bot3Won">
+			<file path="./textures/bot3Won.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Bot4Won">
+			<file path="./textures/bot4Won.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="drop">
+			<file path="./textures/drop.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="drag">
+			<file path="./textures/drag.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="pass">
+			<file path="./textures/pass.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Player1">
+			<file path="./textures/player1.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Player2">
+			<file path="./textures/player2.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Player3">
+			<file path="./textures/player3.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Player4">
+			<file path="./textures/player4.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Bot1">
+			<file path="./textures/bot1.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Bot2">
+			<file path="./textures/bot2.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Bot3">
+			<file path="./textures/bot3.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+		<TEXTURE id="Bot4">
+			<file path="./textures/bot4.png" /> 
+			<amplif_factor s="1" t="1" /> 
+		</TEXTURE>
+	</TEXTURES>
+	
+	<MATERIALS>
+		<MATERIAL id="metal">                                  
+			<shininess value="5" />
+			<specular r="0.9" g="0.9" b="0.9" a="1" /> 
+			<diffuse r="0.1" g="0.1" b="0.1" a="1" />
+			<ambient r="0.2" g="0.2" b="0.2" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="default">                                  
+			<shininess value="5" />
+			<specular r="0" g="0" b="0" a="1" /> 
+			<diffuse r="0.9" g="0.9" b="0.9" a="1" />
+			<ambient r="0.2" g="0.2" b="0.2" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="endScreen">                                  
+			<shininess value="5" />
+			<specular r="0" g="0" b="0" a="1" /> 
+			<diffuse r="0.5" g="0.5" b="0.5" a="1" />
+			<ambient r="0.2" g="0.2" b="0.2" a="1" />
+			<emission r="0.5" g="0.5" b="0.5" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="redStone">                                  
+			<shininess value="240" />                    
+			<specular r="1" g="1" b="1" a="1" />
+			<diffuse r="0.7" g="0.05" b="0.05" a="1" />
+			<ambient r="0" g="0" b="0" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="blueStone">                                  
+			<shininess value="240" />                    
+			<specular r="1" g="1" b="1" a="1" />
+			<diffuse r="0.1" g="0.4" b="0.7" a="1" />
+			<ambient r="0" g="0" b="0" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="yellowStone">                                  
+			<shininess value="240" />                    
+			<specular r="1" g="1" b="1" a="1" />
+			<diffuse r="0.55" g="0.55" b="0.025" a="1" />
+			<ambient r="0" g="0" b="0" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="greenStone">                               
+			<shininess value="240" />                    
+			<specular r="1" g="1" b="1" a="1" /> 
+			<diffuse r="0.2" g="0.6" b="0.05" a="1" />
+			<ambient r="0" g="0" b="0" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="redMarker">                                  
+			<shininess value="120" />
+			<specular r="0.2" g="0.2" b="0.2" a="1" /> 
+			<diffuse r="0.2" g="0.2" b="0.2" a="1" />
+			<ambient r="0" g="0" b="0" a="1" />
+			<emission r="0.9" g="0.1" b="0.1" a="1" />
+		</MATERIAL>
+		<MATERIAL id="blueMarker">                                  
+			<shininess value="120" />
+			<specular r="0.2" g="0.2" b="0.2" a="1" /> 
+			<diffuse r="0.2" g="0.2" b="0.2" a="1" />
+			<ambient r="0" g="0" b="0" a="1" />
+			<emission r="0.2" g="0.6" b="0.9" a="1" />
+		</MATERIAL>
+		<MATERIAL id="yellowMarker">                                  
+			<shininess value="120" />
+			<specular r="0.2" g="0.2" b="0.2" a="1" /> 
+			<diffuse r="0.2" g="0.2" b="0.2" a="1" />
+			<ambient r="0" g="0" b="0" a="1" />
+			<emission r="0.9" g="0.9" b="0.05" a="1" />
+		</MATERIAL>
+		<MATERIAL id="greenMarker">                               
+			<shininess value="120" />                    
+			<specular r="0.2" g="0.2" b="0.2" a="1" /> 
+			<diffuse r="0.2" g="0.2" b="0.2" a="1" />
+			<ambient r="0" g="0" b="0" a="1" />
+			<emission r="0.4" g="0.8" b="0.1" a="1" />
+		</MATERIAL>
+		<MATERIAL id="orange">                                  
+			<shininess value="5" />
+			<specular r="0" g="0" b="0" a="1" /> 
+			<diffuse r="0.9" g="0.5" b="0.01" a="1" />
+			<ambient r="0.2" g="0.2" b="0.2" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="red">                                  
+			<shininess value="5" />
+			<specular r="0" g="0" b="0" a="1" /> 
+			<diffuse r="0.9" g="0.1" b="0.1" a="1" />
+			<ambient r="0.2" g="0.2" b="0.2" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="lightBlue">                                  
+			<shininess value="5" />
+			<specular r="0" g="0" b="0" a="1" /> 
+			<diffuse r="0.2" g="0.99" b="0.99" a="1" />
+			<ambient r="0.2" g="0.2" b="0.2" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="lightGreen">                                  
+			<shininess value="5" />
+			<specular r="0" g="0" b="0" a="1" /> 
+			<diffuse r="0.4" g="0.99" b="0.4" a="1" />
+			<ambient r="0.2" g="0.2" b="0.2" a="1" />
+			<emission r="0" g="0" b="0" a="1" /> 
+		</MATERIAL>
+		<MATERIAL id="iluminated">                                  
+			<shininess value="120" />
+			<specular r="0" g="0" b="0" a="1" /> 
+			<diffuse r="0.9" g="0.8" b="0.8" a="1" />
+			<ambient r="0.2" g="0.2" b="0.2" a="1" />
+			<emission r="0.5" g="0.5" b="0.5" a="1" /> 
+		</MATERIAL>
+	</MATERIALS>
+
+	<animations>
+		<animation id="descolagem" span="8" type="linear">
+			<controlpoint xx="-85" yy="0" zz="-85"/>
+			<controlpoint xx="-84" yy="9" zz="-84"/>
+			<controlpoint xx="0" yy="9" zz="0"/>
+		</animation>
+		 <animation id="orbitar" span="72000000" type="circular" center="0 9 0" radius="12.5" startang="-90" rotang="1000000000" />
+	</animations>
+	
+	<LEAVES>
+	    <LEAF id="rectangle" type="rectangle" args="-0.5 0.5 0.5 -0.5" />
+	    <LEAF id="cylinder" type="cylinder" args="1 1 1 5 20" />
+	    <LEAF id="base" type="cylinder" args="1 13 13 5 50" />
+	    <LEAF id="circle" type="cylinder" args="0 1 0 1 20" />
+	    <LEAF id="InvertedSphere" type="invertedSphere" args="60 50 50" />
+	    <LEAF id="triangle" type="triangle" args="0 0 0 0 0 1 0 1 0" />
+	    <LEAF id="triangle2" type="triangle" args="0 0 1 0 0 0 0 1 0" />
+	    <LEAF id="triangle3" type="triangle" args="1 1 0 0 1 1 0 0 0" />
+	    <LEAF id="triangle4" type="triangle" args="1 1 0 0 0 0 0 1 -1" />
+	    <LEAF id="plane" type="plane" args="50 50"/>
+	    <LEAF id="VEHICLE" type="vehicle" engine="engine" spaceship="spaceship" flame="flame"/>
+	    <LEAF id="terrain" type="terrain" texture="terrain" heightmap="heightmap" />
+	    <LEAF id="patch" type="patch" args="3 3 10 15">
+	    	<controlpoint x="0" y="0" z="0" />
+			<controlpoint x="1" y="0" z="1" />
+			<controlpoint x="1" y="0" z="2" />
+			<controlpoint x="0" y="0" z="3" />	
+
+			<controlpoint x="0" y="0" z="0" />
+			<controlpoint x="0.3" y="0.6" z="1" />
+			<controlpoint x="0.3" y="0.6" z="2" />
+			<controlpoint x="0" y="0" z="3" />
+
+			<controlpoint x="0" y="0" z="0" />
+			<controlpoint x="-0.3" y="0.6" z="1" />
+			<controlpoint x="-0.3" y="0.6" z="2" />
+			<controlpoint x="0" y="0" z="3" />
+
+			<controlpoint x="0" y="0" z="0" />
+			<controlpoint x="-1" y="0" z="1" />
+			<controlpoint x="-1" y="0" z="2" />
+			<controlpoint x="0" y="0" z="3" />
+	    </LEAF>
+	</LEAVES>
+
+	<NODES>
+	    <ROOT id="Space"/> 
+	    <ROOT id="Camp"/>
+
+
+		<NODE id="Space">
+			<MATERIAL id="default" />
+			<TEXTURE id="space" />
+			<DESCENDANTS>
+				<DESCENDANT id="spaceambient"/>
+				<DESCENDANT id="aviao"/>
+				<DESCENDANT id="spacebase"/>
+			</DESCENDANTS>
+		</NODE>
+
+		<NODE id="aviao">
+			<MATERIAL id="default" />
+			<TEXTURE id="null" />
+			<ANIMATIONREF id="orbitar"/>
+			<SCALE sx="0.5" sy="0.5" sz="0.5"/>  
+			<DESCENDANTS>
+				<DESCENDANT id="VEHICLE"/>
+			</DESCENDANTS>
+		</NODE>
+
+		<NODE id="Camp">
+			<MATERIAL id="default" />
+			<TEXTURE id="null" />
+			<DESCENDANTS>
+				<DESCENDANT id="ambient"/>
+				<DESCENDANT id="table"/>
+			</DESCENDANTS>
+		</NODE>
+		<NODE id="ambient">
+			<MATERIAL id="iluminated" />
+			<TEXTURE id="landscape" />
+			<TRANSLATION x="0" y="-4" z="0"/>
+			<SCALE sx="60" sy="1" sz="60"/>
+			<DESCENDANTS>
+				<DESCENDANT id="terrain"/>
+			</DESCENDANTS>
+		</NODE>
+		<NODE id="spaceambient">
+			<MATERIAL id="iluminated" />
+			<TEXTURE id="space" />
+			<DESCENDANTS>
+				<DESCENDANT id="InvertedSphere"/>
+			</DESCENDANTS>
+		</NODE>
+
+		<NODE id="table">
+			<MATERIAL id="default" />
+			<TEXTURE id="wood" />
+			<TRANSLATION x="0" y="-0.2" z="0" />
+			<ROTATION axis="x" angle="90" />
+			<DESCENDANTS>
+				<DESCENDANT id="base"/>
+			</DESCENDANTS>
+		</NODE>
+		<NODE id="spacebase">
+			<MATERIAL id="default" />
+			<TEXTURE id="spaceship2" />
+			<TRANSLATION x="0" y="-0.2" z="0" />
+			<ROTATION axis="x" angle="90" />
+			<DESCENDANTS>
+				<DESCENDANT id="base"/>
+			</DESCENDANTS>
+		</NODE>
+
+
+	</NODES>
+
+
+		
+		
+	
+</SCENE
